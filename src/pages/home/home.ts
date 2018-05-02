@@ -7,22 +7,21 @@ import { NavController,AlertController  } from 'ionic-angular';
 })
 export class HomePage {
  password: string;namePerson: string;
- Radios : array <any>=[];
- Fms : array <any>=[];
+ Radios:Array<Object>;
+ Fms:Array<Object>;
   constructor(public navCtrl: NavController,public alertCtrl: AlertController) {
 
+    this.Radios = [
+      "PhiChai Radio","Thasao Radio"
+      ]    
+      this.Fms = [
+      "FM 97 Mhz","FM 102 Mhz"
+      ]
   }
 
 
-  Radios = [
-  "PhiChai Radio","Thasao Radio"
-  ]
 
-  Fms = [
-  "FM 97 Mhz","FM 102 Mhz"
-  ]
 
-namePerson = "555";
   showAlert(name: string){
     let alert = this.alertCtrl.create({
       title: 'New Friend  !',
