@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Online Fm Radio
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+  <ion-list>
+  <ion-item *ngFor="let Radio of Radios;let i = index">
+      <ion-thumbnail item-start>
+        <img src="img/thumbnail-totoro.png">
+      </ion-thumbnail>
+      <h2>{{Radio}}</h2>
+      <p>{{Fms[i]}}</p>
+      <button ion-button clear item-end>Play</button>
+    </ion-item>
+  </ion-list>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-item>
+      <ion-thumbnail item-start>
+        <img src="img/thumbnail-totoro.png">
+      </ion-thumbnail>
+      <h2>{{Radios[0]}}</h2>
+      <p>{{Fms[0]}}</p>
+      <button ion-button clear item-end>Play</button>
+    </ion-item>
+  </ion-toolbar>
+</ion-footer>
